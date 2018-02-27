@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<style media="screen">
+  .height1 {
+    height: 100px
+  }
+
+  .height2 {
+    height: 50px
+  }
+
+  h1 {
+    font-size: 60px;
+    font-family: Papyrus, sans-serif;
+    color: black;
+    text-align: center;
+  }
+
+  p {
+    font-size: 12px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  body {
+    background-image: url(http://filecatalyst.com/wp-content/uploads/2016/11/subtle-background.jpg);
+  }
+
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #95FFB0;
+    border-radius: 25px;
+  }
+
+  .active {
+    background-color: #007F21;
+    border-radius: 25px;
+  }
+
+#table{
+  background-color: white;
+}
+
+.flexSpaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexVertSpaceAround{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gif{
+  width: 75%;
+  margin-bottom: 40px;
+}
+
+</style>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 flexSpaceAround">
+        <img src="https://media.giphy.com/media/12zxWWVMXNDOy4/giphy.gif" alt="sparkles">
+        <img src="https://media.giphy.com/media/12zxWWVMXNDOy4/giphy.gif" alt="sparkles">
+        <h1>Dank Memes</h1>
+        <img src="https://media.giphy.com/media/12zxWWVMXNDOy4/giphy.gif" alt="sparkles">
+        <img src="https://media.giphy.com/media/12zxWWVMXNDOy4/giphy.gif" alt="sparkles">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height2" style="background-color: #70CC43;">
+        <ul>
+          <li><a class="active" href="json.html">Meme Ratings</a></li>
+          <li><a href="http://knowyourmeme.com/">Know Your Meme</a></li>
+          <li><a href="https://youtu.be/rOq7QYpEwaA">Meme of the Week</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+
+      <div id="table" class="col-md-7 output">
+
+      </div>
+      <div class="col-md-5 flexVertSpaceAround" style="margin-top: 20px;">
+        <img class="gif" src="https://media.giphy.com/media/Vg0JstydL8HCg/giphy.gif" alt="Nicholas Cage laughing">
+        <img class="gif" src="https://media0.giphy.com/media/p4yIX5BHZCkrC/giphy.gif" alt="Jersy Shore coughing">
+        <img class="gif" src="https://www.bet.com/shows/social-awards/2018/nominees/mood-af/_jcr_content/middle/nominees_container/par/nominees_item_2/image.custom640x320.dimg/__1518039007024__1518038989331/100517-Shows-HHA-Best-Memes-Roll-Safe-1024x681.gif" alt="forehead tap">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height2">
+        <p>&copy Dank Memes Inc.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //get a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      var randomColor = $(".randomColor");
+
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+  <script>
+    var memes =
+    [
+      {
+        "freshness": "-1000",
+        "name": "Pepe",
+        "rating": "5/10",
+        "imgUrl": "https://yt3.ggpht.com/-hYyTOmJDOYE/AAAAAAAAAAI/AAAAAAAAAAA/l7JJbGXAgQk/s100-c-k-no-mo-rj-c0xffffff/photo.jpg"
+      },
+
+      {
+        "freshness": "100",
+        "name": "Bee Movie",
+        "rating": "9/10",
+        "imgUrl": "https://i1.sndcdn.com/artworks-000195438549-6j0n5r-large.jpg"
+      },
+
+      {
+        "freshness": "455",
+        "name": "Shrek",
+        "rating": "10/10",
+        "imgUrl": "https://media-exp2.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAfvAAAAJGU3NjA1YjJhLWMzMmQtNGQzOC1hY2E0LTFjZmZmNDcwOGRkYQ.jpg"
+      },
+
+      {
+        "freshness": "3",
+        "name": "Dat Boi",
+        "rating": "7/10",
+        "imgUrl": "https://image.spreadshirtmedia.com/image-server/v1/mp/compositions/P1011929448MPC1019830871/views/1,width=100,height=100,appearanceId=1,backgroundColor=FFFFFF,noPt=true,version=1497260021/dat-boi-men-s-premium-t-shirt.jpg"
+      },
+
+      {
+        "freshness": "300",
+        "name": "Braco",
+        "rating": "9/10",
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ6ci4VZyDWfaWdPZEVawGZWXvO1h0x7DGVVFJc5Wx1RaQT9-TvA"
+      }
+  ];
+
+    $(document).ready(function(){
+      // $(".output").html("test output");
+      var html="<table class= 'table table-striped table-hover'>"+
+      "<tr>"+
+      "<th>Picture</th>"+
+      "<th>Name</th>"+
+      "<th>Rating</th>"+
+      "<th>Freshness</th>"+
+      "</tr>";
+
+      //here is the loop for the array 'memes'
+      for(var i=0;i<memes.length;i++){
+        console.log("i "+i);
+        html+= "<tr>"+
+        "<td><img src= '"+memes[i].imgUrl+"'/></td>"+
+        "<td>"+memes[i].name+"</td>"+
+        "<td>"+memes[i].rating+"</td>"+
+        "<td>"+memes[i].freshness+"</td>"+
+        "</tr>";
+      }
+      html += "</table>";
+      $(".output").html(html);
+
+    });
+  </script>
+</body>
+
+</html>

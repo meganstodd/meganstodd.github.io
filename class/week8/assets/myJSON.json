@@ -5,7 +5,7 @@
     "price":75.00,
     "rating":9,
     "isStock":true,
-    "source":"http://media.guitarcenter.com/is/image/MMGS7/15CM-Concert-Ukulele-Natural/H63578000001000-00-500x500.jpg"
+    "colour":"Light Brown"
   },
   {
     "size":"Concert",
@@ -13,7 +13,7 @@
     "price":70.00,
     "rating":8,
     "isStock":false,
-    "source":"https://cosmomusic.ca/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/F/I/FIUKBEABCUKEC_1_5.jpg"
+    "colour":"Dark Brown"
   },
   {
     "size":"Baritone",
@@ -21,7 +21,7 @@
     "price":85.00,
     "rating":8.5,
     "isStock":true,
-    "source":"https://cosmomusic.ca/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/F/I/FIUKBEABCUKEB_1_5.jpg"
+    "colour":"Mahogany"
   },
   {
     "size":"Soprano",
@@ -29,7 +29,7 @@
     "price":60.00,
     "rating":7.5,
     "isStock":false,
-    "source":"https://images-na.ssl-images-amazon.com/images/I/51nbNV4GdXL._SL1200_.jpg"
+    "colour":"Green"
   },
   {
     "size":"Soprano",
@@ -37,7 +37,7 @@
     "price":55.00,
     "rating":8,
     "isStock":true,
-    "source":"http://tomleemusic.ca/media/catalog/product/cache/1/image/1500x/040ec09b1e35df139433887a97daa66f/1/4/149369_1_7.jpg"
+    "colour":"Mahogany"
   }
 
 ]

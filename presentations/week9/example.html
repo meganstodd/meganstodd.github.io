@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sid's Diner Menu</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style media="screen">
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Graduate|Lato');
+      body{
+        padding: 20px;
+        background-image:url("img/halftone-yellow.png");
+        background-repeat: repeat;
+      }
+      header{
+        text-align: center;
+
+      }
+      mark, h1{
+        font-family: Graduate, display;
+        font-size: 50px;
+        color: red;
+      }
+
+      #nav-bar ul li{
+        list-style-type: none;
+        display: inline-block;
+        font-family: "Amatic SC";
+        font-size: 40px;
+        padding-right: 20px;
+      }
+      #nav-bar li{
+        margin: 15px;
+      }
+      #nav-bar ul{
+        text-align: center;
+      }
+      #appetizers, #mains, #beverages{
+        margin-top: 50px;
+        font-family: "Amatic SC";
+        font-size: 50px;
+        text-decoration: underline;
+        font-weight: bold;
+        margin-left: 300px;
+      }
+      #soups-salads, #sides, #desserts{
+        margin-top: 50px;
+        font-family: "Amatic SC";
+        font-size: 50px;
+        text-decoration: underline;
+        font-weight: bold;
+        margin-left: 700px;
+      }
+      #appetizers-items, #mains-items, #beverages-items{
+        list-style-type: none;
+        margin-left: 260px;
+        font-family: Lato;
+        font-size: 20px;
+
+      }
+      #soups-salads-items, #sides-items, #desserts-items{
+        list-style-type: none;
+        margin-left: 660px;
+        font-family: Lato;
+        font-size: 20px;
+      }
+      #nachos{
+        position: absolute;
+        right: 300px;
+        top: 250px;
+      }
+      #sm{
+        position: absolute;
+        right: 250px;
+        top: 940px;
+      }
+      #coke{
+        position: absolute;
+        right: 150px;
+        top: 1500px;
+      }
+      #greek{
+        position: absolute;
+        left: 320px;
+        top: 590px;
+      }
+      #poutine{
+        position: absolute;
+        left:320px;
+        top: 1280px;
+      }
+      #tiramisu{
+        position: absolute;
+        left: 320px;
+        top: 2000px;
+      }
+      footer{
+        text-align: center;
+        bottom: 0;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header id="heading">
+        <h1> <mark> Sid's Diner Menu  </mark> </h1>
+    </header>
+
+    <nav id="nav-bar" flex>
+        <ul>
+          <li><a href="#appetizers"> Appetizers </a></li>
+          <li><a href="#soups-salads"> Soups & Salads </a></li>
+          <li><a href="#mains"> Mains</a></li>
+          <li><a href="#sides"> Sides </a></li>
+          <li><a href="#beverages"> Beverages</a></li>
+          <li><a href="#desserts"> Desserts</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-body">
+
+      <h4 id="appetizers">Appetizers</h4>
+        <ul id="appetizers-items">
+          <li>Mozzarella Sticks</li>
+          <li>Nachos</li>
+          <li>Chicken Wings</li>
+          <li>Deep Fried Pickles</li>
+          <li>Spring Rolls</li>
+          <li>Bruschetta</li>
+          <li>Calamari</li>
+          <li>Potato Skins</li>
+          <img id="nachos" height="300px" width="300px" src="img/nachos.jpg" alt="Nachos" />
+        </ul>
+
+
+
+      <h4 id="soups-salads">Soups & Salads</h4>
+        <ul id="soups-salads-items">
+          <li>Cobb Salad</li>
+          <li>Cesar Salad</li>
+          <li>Greek Salad</li>
+          <li>Garden Salad</li>
+          <li>Chicken Noodle Soup</li>
+          <li>French Onion Soup</li>
+          <li>Potato and Cheddar Soup</li>
+          <img id="greek" height="250px" width="350px" src= "img/greeksalad.jpg" alt="Greek Salad" />
+        </ul>
+
+
+      <h4 id="mains"> Mains </h4>
+      <ul id="mains-items">
+        <li>Hamburger</li>
+        <li>Cheeseburger</li>
+        <li>Fajita's</li>
+        <li>Spaghetti & Meatballs</li>
+        <li>Four Cheese Mac & Cheese</li>
+        <li>Fish and Chips</li>
+        <li>Chicken Avocado Sandwich</li>
+        <li>Grilled Cheese</li>
+        <li>Chicken Fingers</li>
+        <img id="sm" height="250px" width="350px" src= "img/sm.jpg" alt="Spaghetti & Meatballs" />
+      </ul>
+
+
+      <h4 id="sides"> Sides </h4>
+        <ul id="sides-items">
+          <li>Salad</li>
+          <li>Fries</li>
+          <li>Poutine</li>
+          <li>Sweet Potato Fries</li>
+          <li>Fully Loaded Baked Potato</li>
+          <li>Mashed Potatoes</li>
+          <li>Rice</li>
+          <img id="poutine" height="250px" width="350px" src= "img/poutine.jpg" alt="Poutine" />
+        </ul>
+
+
+      <h4 id="beverages"> Beverages </h4>
+        <ul id="beverages-items">
+          <li>Apple Juice</li>
+          <li>Orange Juice</li>
+          <li>Fruit Punch</li>
+          <li>Coke</li>
+          <li>Sprite</li>
+          <li>Iced Tea</li>
+          <li>Tea</li>
+          <li>Coffee</li>
+          <li>Beer</li>
+          <li>Wine</li>
+          <li>Check Drink Menu for our house cocktails</li>
+          <img id="coke" height="450px" width="550px" src= "img/coke.png" alt="Coca-Cola" />
+        </ul>
+
+      <h4 id="desserts"> Desserts </h4>
+        <ul id="desserts-items">
+          <li>Strawberry Cheesecake</li>
+          <li>Warm Brownie</li>
+          <li>Apple Pie</li>
+          <li>Tiramisu</li>
+          <li>Ice Cream</li>
+          <li>Crème Brulee</li>
+          <img id="tiramisu" height="250px" width="350px" src= "img/tiramisu.jpg" alt="Tiramisu" />
+        </ul>
+    </main>
+
+    <footer>
+
+      <p>
+         &copy Alissa, Sarah, John & Loucas
+      </p>
+
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

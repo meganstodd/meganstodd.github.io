@@ -127,18 +127,20 @@
 
         html += "<div data-id='" + jsonObj + "' class='itemContainer'>";
         // here loop through the keys
-        3
 
-        for (key in d[jsonObj]) { //loop through the keys of each object
-          if (key === "itemId") {
-            continue; //continue means skip this iteration of the loop
-          }
-          if (d[jsonObj][key].indexOf("github") !== -1) {
-            //if 'github' text appears in the value (-1 means not found)
-            html += "<div class='imageContainer'><img src='https://" + d[jsonObj][key] + "'></div>";
-          } else { //otherwise use the key as the class and the value as the text
-            html += "<div class='" + key + "'>" + d[jsonObj][key] + "</div>";
-          }
+
+for (key in d[jsonObj]){//loop through the keys of each object
+  var str = String(d[jsonObj][key]);
+  if (key==="itemId"){
+    continue;//continue means skip this iteration of the loop
+  }
+  if (str.indexOf("github")!==-1){
+    //if 'github' text appears in the value (-1 means not found)
+    html+="<div class='imageContainer'><img src='https://"+d[jsonObj][key]+"'></div>";
+  }
+  else{//otherwise use the key as the class and the value as the text
+    html+="<div class='"+key+"'>"+d[jsonObj][key]+"</div>";
+  }
         }
         html += "<div class='buttonContainer'>";
         html += "<button type='button' class='buyButton btn-default btn'>Buy</button>"

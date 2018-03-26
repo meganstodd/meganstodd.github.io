@@ -131,3 +131,20 @@ select{
   padding-bottom: 16px;
   border:1px solid #333;
 }
+
+.megStoUrl{
+  width: 200px;
+}
+
+.megStoTitle {
+  text-align: center;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 16px;
+}
+.megStoSkillLevel{
+  text-align: center;
+  font-style: italic;
+  font-size: 11px;
+}

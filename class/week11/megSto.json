@@ -4,31 +4,31 @@
       "itemId": 1,
       "megStoTitle": "Kirby",
       "megStoSkillLevel": 50,
-      "megStoUrl": "github.com/meganstodd/meganstodd.github.io/blob/master/class/week11/img1.png?raw=true"
+      "megStoUrl": "meganstodd.github.io/class/week11/img1.png"
     },
     "2": {
       "itemId": 2,
       "megStoTitle": "Toon Link",
       "megStoSkillLevel": 70,
-      "megStoUrl": "github.com/meganstodd/meganstodd.github.io/blob/master/class/week11/img2.png?raw=true"
+      "megStoUrl": "meganstodd.github.io/class/week11/img2.png"
     },
     "3": {
       "itemId": 3,
       "megStoTitle": "Pikachu",
       "megStoSkillLevel": 60,
-      "megStoUrl": "github.com/meganstodd/meganstodd.github.io/blob/master/class/week11/img3.gif?raw=true"
+      "megStoUrl": "meganstodd.github.io/class/week11/img3.gif"
     },
     "4": {
       "itemId": 4,
       "megStoTitle": "Jigglypuff",
       "megStoSkillLevel": 30,
-      "megStoUrl": "github.com/meganstodd/meganstodd.github.io/blob/master/class/week11/img4.png?raw=true"
+      "megStoUrl": "meganstodd.github.io/class/week11/img4.png"
     },
     "5": {
       "itemId": 5,
       "megStoTitle": "Yoshi",
       "megStoSkillLevel": 20,
-      "megStoUrl": "github.com/meganstodd/meganstodd.github.io/blob/master/class/week11/img5.png?raw=true"
+      "megStoUrl": "meganstodd.github.io/class/week11/img5.png"
     }
   }
 }

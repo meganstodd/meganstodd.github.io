@@ -21,10 +21,100 @@
       text-align: center;
     }
 
-    .itemButton{
-      text-align: right;
-      padding: 10px;
+    .logo {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 120px;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: -3px;
+      line-height: 1;
+      text-shadow: #EDEDED 3px 2px 0;
+      position: relative;
     }
+
+    /* background of logo */
+    .logo:after {
+      text-align:center;
+      content:"Rich Privilege";
+      position: absolute;
+      margin-left: 100px;
+      left: 8px;
+      top: 32px;
+      background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+      background-size: 4px 4px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      z-index: -5;
+      display: block;
+      text-shadow: none;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 30px 16px;
+      text-decoration: none;
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+    }
+
+    .active{
+      color: grey;
+    }
+
+    .flexSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nameLabel{
+      text-align: center;
+        text-transform: uppercase;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .priceLabel{
+      text-align: center;
+      font-style: italic;
+      font-size: 13px;
+      margin: 10px;
+    }
+
+    .descriptionLabel{
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      padding: 10px 10px;
+    }
+
+    .footer span{
+      margin: 3em;
+      float: right;
+    }
+
+    body {
+      background-image: url(http://www.patternpictures.com/wp-content/uploads/2018/01/Seamless-Texture-Subtle-Plaster-Wall-Background-171229.jpg);
+    }
+
   </style>
 
   <!-- Bootstrap -->
@@ -41,12 +131,36 @@
 
 <body>
   <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 logo">
+        Yeezy
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 flexSpaceAround">
+        <ul>
+          <li><a class="active" href="index.html">Overpriced Things</a></li>
+          <li><a href="https://www.valuevillage.com/">The Same Thing But Cheaper</a></li>
+          <li><a href="https://ca.burberry.com/mens-coats-jackets/">The Same Thing But More Expensive</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-md-12 cardSection">
       </div>
       <div class="col-md-12">
         <div class="outputArray">
         </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 footer">
+        <hr>
+        <span>© 2018 Yeezy.com</span>
       </div>
     </div>
   </div>
@@ -60,26 +174,26 @@
 
       //These are your Object Arrays
       var yeezyCollection = [{ //Change arrayTopic to whatever topic your group chose in class
-          "name": "YEEZY Black Crest Logo Classic T-Shirt",
+          "name": "Black Crest Logo Classic T-Shirt",
           "price": "$205.00",
           "description": "Short sleeve cotton jersey t-shirt in ink black. Rib knit crewneck collar. Multicolor embroidered patch at chest. Tonal stitching.Part of the YEEZY Season 5 collection.",
-          "imgUrl": "https://meganstodd.github.io/presentations/week11/img1.jpeg",
+          "imgUrl": "https://meganstodd.github.io/presentations/week11/img1.jpeg"
 
         },
 
         { //Change arrayTopic to whatever topic your group chose in class
-            "name": "Yeezy - Suede and Shearling Jacket with Hood,red",
+            "name": "Suede and Shearling Jacket with Hood,red",
             "price": "$2,352.25",
             "description": "Keep stylishly warm in this boxy burgundy lambskin hoodie-style jacket from Yeezy - complete with a kangaroo pocket - elongated sleeves and plush shearling lining.",
-            "imgUrl": "https://meganstodd.github.io/presentations/week11/img2.jpeg",
+            "imgUrl": "https://meganstodd.github.io/presentations/week11/img2.jpeg"
 
           },
 
           { //Change arrayTopic to whatever topic your group chose in class
-              "name": "Yeezy - Distressed Pullover with Wool,black",
+              "name": "Distressed Pullover with Wool,black",
               "price": "$2,569.52",
               "description": "Dyed in wear-anywhere black, this nonchalant pullover from Yeezy is made with wool for an indulgent feel. The distressed finish keeps it youthful, tough and signature to the brand.",
-              "imgUrl": "https://meganstodd.github.io/presentations/week11/img3.jpeg",
+              "imgUrl": "https://meganstodd.github.io/presentations/week11/img3.jpeg"
 
             }
       ];
@@ -100,8 +214,8 @@
           html += "<div class='panel panel-default individualCard'>" +
             "<div><img class='img-responsive' src='" + yeezyCollection[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
             "<div class='cardInfo nameLabel'>" + yeezyCollection[i].name + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ageLabel'>" + yeezyCollection[i].price + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + yeezyCollection[i].description + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo priceLabel'>" + yeezyCollection[i].price + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo descriptionLabel'>" + yeezyCollection[i].description + "</div>" + //change the red text to the keys in your Array
             "</div>";
         }
         $(".outputArray").html(html); //outputs the loop onto the html
